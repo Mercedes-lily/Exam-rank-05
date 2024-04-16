@@ -2,6 +2,8 @@
 # define SPELLBOOK_HPP
 # include <string> 
 # include <iostream> 
+# include "ASpell.hpp"
+# include <vector>
 
 class SpellBook
 {
@@ -9,9 +11,9 @@ class SpellBook
 		SpellBook();
 		virtual ~SpellBook();
 		void learnSpell(ASpell* spell);
-		void forgetSpell(string const & spellName);
-		ASpell* createSpell(string const &spellName);
-		void aunchSpell(std::string spellName, const ATarget &target);
+		void forgetSpell(std::string const & spellName);
+		ASpell* createSpell(std::string const &spellName);
+		void launchSpell(std::string spellName, const ATarget &target);
 
 	private:
 		std::vector<ASpell *> _knownSpell;

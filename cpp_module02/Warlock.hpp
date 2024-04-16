@@ -4,6 +4,7 @@
 # include <iostream> 
 # include <vector> 
 # include "ASpell.hpp"
+# include "SpellBook.hpp"
 
 class Warlock
 {
@@ -20,7 +21,7 @@ class Warlock
 	private:
 		std::string _name;
 		std::string _title;
-		std::vector<ASpell *> _knownSpell;
+		SpellBook _book;
 		Warlock(){};
 		Warlock(const Warlock & W){(void)W;};
 		const Warlock &operator=(const Warlock &X)
